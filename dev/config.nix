@@ -27,12 +27,12 @@
         projectRootFile = "flake.nix";
 
         programs = {
-          nixpkgs-fmt.enable = true;
+          nixfmt.enable = true;
           deadnix.enable = true;
         };
 
         settings.formatter = {
-          nixpkgs-fmt = {
+          nixfmt = {
             excludes = [ ];
           };
           deadnix = {
