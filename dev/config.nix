@@ -15,9 +15,10 @@
 
   # https://flake.parts/options/flake-parts.html#opt-perSystem
   perSystem =
-    { config
-    , pkgs
-    , ...
+    {
+      config,
+      pkgs,
+      ...
     }:
     {
 
@@ -27,12 +28,12 @@
         projectRootFile = "flake.nix";
 
         programs = {
-          nixpkgs-fmt.enable = true;
+          nixfmt.enable = true;
           deadnix.enable = true;
         };
 
         settings.formatter = {
-          nixpkgs-fmt = {
+          nixfmt = {
             excludes = [ ];
           };
           deadnix = {
