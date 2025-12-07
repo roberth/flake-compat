@@ -14,10 +14,9 @@
       # TODO: add `lib`.
       publicOutputs = { };
 
-      devOutputs = devInputs.flake-parts.lib.mkFlake
-        {
-          inputs = devInputs;
-        } ./dev/config.nix;
+      devOutputs = devInputs.flake-parts.lib.mkFlake {
+        inputs = devInputs;
+      } ./dev/config.nix;
       devInputs = devDeps // {
         self = self // {
           inputs = devInputs;
